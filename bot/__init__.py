@@ -1,5 +1,6 @@
 from config import Config
 from pyrogram import Client
+import subprocess, os
 
 bot = Config.BOT_USERNAME
 
@@ -29,5 +30,10 @@ aio = Client(
     plugins=plugins,
     workdir=Config.WORK_DIR
 )
+
+try:
+    subprocess.Popen([f"gunicorn server:app --bind 0.0.0.0:{Config.PORT} --worker-class gevent"], shell=True)
+except:
+    pass
 
 cmd = CMD()
