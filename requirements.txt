@@ -14,3 +14,6 @@ pathvalidate
 music_tag
 git+https://github.com/kokarare1212/librespot-python#egg=librespot
 ffmpeg-python
+gunicorn
+gevent
+flask
