@@ -1,5 +1,5 @@
-pyrogram==2.0.96
-tgcrypto
+pyrofork
+TgCrypto-pyrofork
 aiohttp
 mutagen
 psutil
